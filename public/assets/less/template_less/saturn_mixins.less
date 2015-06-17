@@ -1,0 +1,106 @@
+
+// MIXINS
+
+
+.animation-duration(@sec){
+  -webkit-animation-duration: @sec;
+  -moz-animation-duration: @sec;
+  -o-animation-duration: @sec;
+  animation-duration: @sec;
+}
+
+.animation-delay(@sec){
+  -webkit-animation-delay: @sec;
+  -moz-animation-delay: @sec;
+  -o-animation-delay: @sec;
+  animation-delay: @sec;
+}
+
+.animation-name(@name){
+  -webkit-animation-name: @name;
+  -moz-animation-name: @name;
+  -o-animation-name: @name;
+  animation-name: @name;
+}
+
+.animated-infinite {
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
+}
+
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
+}
+
+.delay-animation-one {
+  .animation-delay(0.4s);
+}
+
+.delay-animation-two {
+  .animation-delay(0.5s);
+}
+
+.delay-animation-three {
+  .animation-delay(1.2s);
+}
+
+.delay-animation-four {
+  .animation-delay(1.6s);
+}
+
+@keyframes animated-alert{
+  0% {background-color: #FFBF00; }
+  50% {background-color:#B5A370;}
+  100% {background-color: #FFBF00; }
+}
+
+@-moz-keyframes animated-alert /* Firefox */{
+  0% {background-color: #FFBF00; }
+  50% {background-color:#B5A370;}
+  100% {background-color: #FFBF00; }
+}
+
+@-webkit-keyframes animated-alert /* Safari and Chrome */{
+  0% {background-color: #FFBF00; }
+  50% {background-color:#B5A370;}
+  100% {background-color: #FFBF00; }
+}
+
+
+.loading-animated {
+  animation: animated-loading 0.5s;
+  -moz-animation: animated-loading 0.5s; /* Firefox */
+  -webkit-animation: animated-loading 0.5s; /* Safari and Chrome */
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+}
+
+@keyframes animated-loading{
+  100% {
+    .transform(rotate(360deg));
+  }
+}
+
+@-moz-keyframes animated-loading /* Firefox */{
+  100% {
+    .transform(rotate(360deg));
+  }
+}
+
+@-webkit-keyframes animated-loading /* Safari and Chrome */{
+  100% {
+    .transform(rotate(360deg));
+  }
+}

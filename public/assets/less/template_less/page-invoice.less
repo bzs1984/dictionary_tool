@@ -1,0 +1,200 @@
+
+
+// STYLES FOR INVOICE
+
+
+.invoice-buttons {
+  text-align: right;
+  @media (max-width: @screen-sm) {
+    margin: 20px 0px;
+    text-align: center;
+  }
+}
+.back-invoice-link {
+  @media (max-width: @screen-sm) {
+    text-align: center;
+  }
+}
+.invoice-w {
+  margin-top: 30px;
+
+  .invoice-logo {
+    font-size: 55px;
+    background-color: #313740;
+    border-radius: 50%;
+    padding-top: 5px;
+    color: #fff;
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    text-align: center;
+  }
+  .invoice-company {
+    padding-top: 10px;
+  }
+  .invoice-date-w {
+    text-align: right;
+  }
+  .invoice-number {
+    font-weight: 500;
+    font-size: 42px;
+    color: #ddd;
+  }
+  .invoice-date {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  @media (max-width: @screen-sm) {
+    .invoice-company {
+      text-align: center;
+    }
+    .invoice-logo {
+      text-align: center;
+      margin-bottom: 30px;
+      display: none;
+    }
+    .invoice-header {
+      text-align: center;
+    }
+    .invoice-number {
+      font-size: 24px;
+    }
+    .invoice-date-w {
+      text-align: center;
+    }
+    .ic-more-info {
+      text-align: left;
+    }
+  }
+  .ic-name {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .ic-sub-name {
+    font-size: 14px;
+    font-weight: 100;
+    color: #888;
+  }
+  .ic-address {
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  .invoice-header {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+  }
+  .invoice-total-top {
+    background-color: #313740;
+    color: #ffffff;
+    padding: 10px;
+    .label {
+      color: #eee;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+    .value {
+      font-size: 36px;
+      text-align: right;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    &.invoice-inline-total {
+      text-align: right;
+      .value {
+        margin-top: 0px;
+      }
+    }
+  }
+  .invoice-client {
+    text-align: right;
+    background-color: #f1f4f6;
+    padding: 30px;
+    .icl-name {
+      font-size: 24px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .icl-address {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+  .invoice-payment-info {
+    background-color: #FFFCF4;
+    padding: 30px;
+    font-weight: 300;
+    color: #7F7766;
+    margin-top: 50px;
+    font-size: 10px;
+    strong {
+      font-weight: 500;
+    }
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .ic-more-info {
+    list-style: none;
+    margin: 0px;
+    font-weight: 300;
+    color: #777;
+    font-size: 18px;
+    padding: 0px;
+    strong {
+      font-weight: 500;
+    }
+
+    li {
+      margin-bottom: 10px;
+      .fa {
+        width: 30px;
+        text-align: center;
+        display: inline-block;
+        height: 30px;
+        line-height: 25px;
+        padding-top: 3px;
+        border-radius: 50%;
+        background-color: #50ADF4;
+        color: #fff;
+        text-align: center;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .invoice-table {
+    font-size: 18px;
+    font-weight: 300;
+    thead {
+      th {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 30px 15px;
+        background-color: #f1f4f6;
+      }
+    }
+    .ii-name {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .ii-sub-name {
+      color: #aaa;
+      font-weight: 300;
+      font-size: 14px;
+    }
+    td {
+      padding: 30px 15px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+
+// BUTTONS
+
+.btn {
+  .fa:first-child {
+    margin-right: 5px;
+  }
+}
+
+.button-example {
+  .btn {
+    margin-bottom: 5px;
+  }
+}
+
+
+// BREADCRUMBS
+
+.breadcrumb {
+  border-bottom: 1px solid darken(@content-bg, 10%);
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  li {
+    margin-right: 15px;
+  }
+  a {
+    display: block;
+    border-radius: 4px;
+    color: @breadcrumb-color;
+    padding: 3px 10px;
+    border: 1px solid darken(@breadcrumb-bg, 15%);
+    background-color: transparent;
+    position: relative;
+    &:hover {
+      text-decoration: none;
+      border: 1px solid #888;
+    }
+    &:after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: absolute;
+      font-weight: normal;
+      top: 4px;
+      right: -12px;
+      color: #ccc;
+    }
+  }
+}
