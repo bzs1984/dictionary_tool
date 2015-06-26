@@ -33,7 +33,7 @@
           @foreach ($list as $vo)
             <tr>
               <td><div class="checkbox"><input type="checkbox"></div></td>
-              <td>{{$vo->table_name}}</td>
+              <td><a  href="{{ URL::to("zadmin/table/fields/$vo->id")}}"> {{$vo->table_name}} </a></td>
               <td>{{$vo->table_note}}</td>
               <td>{{$vo->db->db_name}}</td>
              
