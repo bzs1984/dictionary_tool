@@ -12,7 +12,7 @@
       <li {{ ($ctrName=='OrderController')? 'class=current':''}} >
         <a href="{{  URL::to('zadmin/db') }}" data-toggle="tooltip" data-placement="right" title="" data-original-title="数据库管理">
          
-          <i class="fa fa-file-text-o"></i>
+          <i class="fa fa-inbox"></i>
         </a>
       </li>
 
@@ -23,15 +23,15 @@
       <!--数据表管理-->
       <li {{ ($ctrName=='BranchController')? 'class=current':''}}>
         <a href="{{  URL::to('zadmin/table') }}" data-toggle="tooltip" data-placement="right" title="" data-original-title="数据表管理">
-          <i class="fa fa-map-marker"></i>
+          <i class="fa fa-file-text-o "></i>
         </a>
       </li>
 
     
       <!--字段管理-->
     <li {{ ($ctrName=='AdminController')? 'class=current':''}}>
-      <a href="{{URL::to('zadmin/field')}}" data-toggle="tooltip" data-placement="right" title="" data-original-title="字段管理">
-        <i class="fa fa-user"></i>
+      <a href="{{URL::to('zadmin/field')}}" data-toggle="tooltip" data-placement="right" title="字段管理" data-original-title="字段管理">
+        <i class="fa fa-ticket"></i>
       </a>
     </li>
 

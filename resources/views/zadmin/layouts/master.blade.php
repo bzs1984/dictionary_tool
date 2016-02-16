@@ -11,19 +11,19 @@
         
       
 
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/fullcalendar.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/datatables/datatables.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/datatables/bootstrap.datatables.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/chosen.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/jquery.timepicker.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/daterangepicker-bs3.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/colpick.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/dropzone.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/jquery.handsontable.full.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/jscrollpane.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/jquery.pnotify.default.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/plugins/jquery.pnotify.default.icons.css'>
-<link rel='stylesheet' href='{{ $static }}assets/css/app.css'>
+<link rel='stylesheet' href='/assets/css/plugins/fullcalendar.css'>
+<link rel='stylesheet' href='/assets/css/plugins/datatables/datatables.css'>
+<link rel='stylesheet' href='/assets/css/plugins/datatables/bootstrap.datatables.css'>
+<link rel='stylesheet' href='/assets/css/plugins/chosen.css'>
+<link rel='stylesheet' href='/assets/css/plugins/jquery.timepicker.css'>
+<link rel='stylesheet' href='/assets/css/plugins/daterangepicker-bs3.css'>
+<link rel='stylesheet' href='/assets/css/plugins/colpick.css'>
+<link rel='stylesheet' href='/assets/css/plugins/dropzone.css'>
+<link rel='stylesheet' href='/assets/css/plugins/jquery.handsontable.full.css'>
+<link rel='stylesheet' href='/assets/css/plugins/jscrollpane.css'>
+<link rel='stylesheet' href='/assets/css/plugins/jquery.pnotify.default.css'>
+<link rel='stylesheet' href='/assets/css/plugins/jquery.pnotify.default.icons.css'>
+<link rel='stylesheet' href='/assets/css/app.css'>
 
  
 
