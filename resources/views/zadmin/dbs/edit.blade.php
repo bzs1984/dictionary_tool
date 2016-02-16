@@ -28,6 +28,18 @@
                 <label>数据库名称</label>
                 <input type="text" name="db_name" class="form-control" readonly value="{{ $vo->db_name }}" placeholder="" required>
               </div>
+              <div class="form-group">
+                <label>host</label>
+                <input type="text" name="host" class="form-control" readonly value="{{ $vo->host }}" placeholder="" required>
+              </div>
+              <div class="form-group">
+                <label>用户名</label>
+                <input type="text" name="username" class="form-control" readonly value="{{ $vo->username }}" placeholder="" required>
+              </div>
+              <div class="form-group">
+                <label>密码</label>
+                <input type="text" name="password" class="form-control" readonly value="{{ $vo->password }}" placeholder="" required>
+              </div>
                <div class="form-group">
                 <label>注释</label>
                 <input type="text" name="db_note" class="form-control" value="{{ $vo->db_note }}" placeholder="" required>

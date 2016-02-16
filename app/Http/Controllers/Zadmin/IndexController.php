@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller as Controller;
 
 use Illuminate\Support\Facades\Session;
 use App\Http\Helper;
-
+use Config;
 use Request;
 use View;
 use Input;
@@ -36,6 +36,7 @@ class IndexController extends Controller {
 	 */
 	public function getIndex()
 	{
+		
 		
 		
 		$data['sider'] = self::$sider;

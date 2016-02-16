@@ -7,6 +7,7 @@ use App\Models\FieldsModel as F;
 use Request;
 use Schema;
 use DB;
+use Config;
 
 class DbController extends Controller {
 
@@ -70,6 +71,21 @@ class DbController extends Controller {
         }
     }
 
+    public function postStore()
+    {
+        $data =  Request::except('_token');       
+        
+        $flag =  D::store($data);
+
+        if($flag)
+        {
+            return redirect($this->redirect)->with(['msg'=>['type'=>'success', 'txt'=>'添加成功']]);
+        }else
+        {
+            return redirect($this->redirect)->with(['msg'=>['type'=>'danger', 'txt'=>'添加失败']]);
+        }
+    }
+
    
 
     public function getDelete($id)
@@ -85,13 +101,21 @@ class DbController extends Controller {
     }
 
     // 初始化数据字典 根据数据库名导入所有的表名和字段
-    public function getInit()
+    public function getInit($db_id=1)
     {
+        $db = D::find($db_id);
+        $db->imported = 1;
+        $db->save();
         $flag = 0;
-        // 截断表 id从1重新开始
-         DB::table('tables')->truncate(); 
-         DB::table('fields')->truncate(); 
 
+        // 截断表 id从1重新开始
+         // DB::table('tables')->truncate(); 
+         // DB::table('fields')->truncate();
+         Config::set('database.connections.mysql_dic.database',$db->db_name); 
+         Config::set('database.connections.mysql_dic.host',$db->host);
+         Config::set('database.connections.mysql_dic.username',$db->username);
+         Config::set('database.connections.mysql_dic.password',$db->password);
+         
         // 通过遍历获得所有的表        
         $tables  = DB::connection('mysql_dic')->select('SHOW TABLE STATUS');
         //dd($tables);
@@ -117,10 +141,10 @@ class DbController extends Controller {
 
         if($flag)
         {
-            return redirect($this->redirect)->with(['msg'=>['type'=>'success', 'txt'=>'初始化成功']]);
+            return redirect($this->redirect)->with(['msg'=>['type'=>'success', 'txt'=>'源数据库导入成功']]);
         }else
         {
-            return redirect($this->redirect)->with(['msg'=>['type'=>'danger', 'txt'=>'初始化失败']]);
+            return redirect($this->redirect)->with(['msg'=>['type'=>'danger', 'txt'=>'源数据库导入失败']]);
         }
        
     }
